@@ -17,9 +17,7 @@ if st.session_state.get("mostrar_solar", False):
     p1 = st.radio(
         "¿Qué energía solar genera electricidad?",
         ["Solar Térmica", "Solar Fotovoltaica", "Solar Geotérmica"],
-        key="p1"
-    )
-
+        key="p1")
     p2 = st.radio(
         "¿Cuál es el principal beneficio ambiental?",
         ["Genera pocos residuos", "Reduce CO2", "Funciona de noche"],
