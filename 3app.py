@@ -3,7 +3,7 @@ st.title("EcoAprende 🌱")
 progreso = {"Solar": {"completado": False, "puntaje": 0}}
 st.subheader("Juegos disponibles")
 juego = "Solar"
-# Si está completado, mostrar ✔️
+
 estado = "✔️" if progreso[juego]["completado"] else ""
 if st.button(f"{juego} {estado}"):
     st.session_state["mostrar_solar"] = not st.session_state.get("mostrar_solar", False)
