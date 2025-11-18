@@ -1,8 +1,6 @@
 import streamlit as st
 
 st.title("EcoAprende 🌱")
-
-
 progreso = {
     "Solar": {"completado": False, "puntaje": 0}}
 
