@@ -2,9 +2,7 @@ import streamlit as st
 st.title("EcoAprende 🌱")
 progreso = {"Solar": {"completado": False, "puntaje": 0}}
 st.subheader("Juegos disponibles")
-
 juego = "Solar"
-
 # Si está completado, mostrar ✔️
 estado = "✔️" if progreso[juego]["completado"] else ""
 
