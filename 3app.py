@@ -2,18 +2,31 @@ import streamlit as st
 
 st.title("EcoAprende 🌱")
 
+# ---------------------------
+#      PROGRESO
+# ---------------------------
 progreso = {
-    "Solar": {"completado": False, "puntaje": 0}}
+    "Solar": {"completado": False, "puntaje": 0}
+}
+
+# ---------------------------
+#      INTERFAZ ÚNICA
+# ---------------------------
 
 st.subheader("Juegos disponibles")
 
-juego = "Energia Solar"
+# Mostrar el botón del juego
+juego = "Solar"
 
+# Si está completado, mostrar ✔️
 estado = "✔️" if progreso[juego]["completado"] else ""
 
 if st.button(f"{juego} {estado}"):
     st.session_state["mostrar_solar"] = not st.session_state.get("mostrar_solar", False)
 
+# ---------------------------
+#      CONTENIDO DEL JUEGO
+# ---------------------------
 if st.session_state.get("mostrar_solar", False):
 
     st.header("🌞 Juego: Energía Solar")
@@ -22,12 +35,14 @@ if st.session_state.get("mostrar_solar", False):
     p1 = st.radio(
         "¿Qué energía solar genera electricidad?",
         ["Solar Térmica", "Solar Fotovoltaica", "Solar Geotérmica"],
-        key="p1")
+        key="p1"
+    )
 
     p2 = st.radio(
         "¿Cuál es el principal beneficio ambiental?",
         ["Genera pocos residuos", "Reduce CO2", "Funciona de noche"],
-        key="p2")
+        key="p2"
+    )
 
     if st.button("Enviar respuestas"):
 
@@ -42,4 +57,5 @@ if st.session_state.get("mostrar_solar", False):
 
         st.success(f"¡Completado! Puntaje: {puntaje} ⭐")
         st.balloons()
+
 
