@@ -9,7 +9,7 @@ st.subheader("Juegos disponibles")
 
 juego = "Energia Solar"
 
-estado = "Hecho" if progreso[juego]["completado"] else ""
+estado = "✔️" if progreso[juego]["completado"] else ""
 
 if st.button(f"{juego} {estado}"):
     st.session_state["mostrar_solar"] = not st.session_state.get("mostrar_solar", False)
