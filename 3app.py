@@ -57,7 +57,7 @@ preguntas_solar = [
      "correcta":"Poseen una estructura uniforme que reduce la recombinación electrónica"},
     {"pregunta":"¿¿Por qué se considera una energía renovable?",
      "opciones":["porque es económica","tiene un menor impacto ambienta","su tecnología es de una calidad mayor","puede usarse en diferentes ámbitos "],
-     "correcta":"tiene un menor impacto ambiental"},
+     "correcta":"tiene un menor impacto ambiental"},]
 
 preguntas_eolica = [{"pregunta":"¿Qué tipo de energía aprovechan los aerogeneradores?",
      "opciones":["Energía solar","Energía del viento","Energía hidráulica","Energía geotérmica"],
