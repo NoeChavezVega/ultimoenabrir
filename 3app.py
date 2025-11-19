@@ -1,9 +1,9 @@
 import streamlit as st
 st.title("🌱 EcoAprende de Energías🔌")
-progreso = {"☀️Solar🪟": {"completado": False, "puntaje": 0},
-    "💨Eolica𖣘": {"completado": False, "puntaje": 0},
-    "💦Hidraulica⚙️": {"completado": False, "puntaje": 0},
-    "🌱Biomasa🔥": {"completado": False, "puntaje": 0},}
+progreso = {"Solar": {"completado": False, "puntaje": 0},
+    "Eolica": {"completado": False, "puntaje": 0},
+    "Hidraulica": {"completado": False, "puntaje": 0},
+    "Biomasa": {"completado": False, "puntaje": 0},}
 
 def mostrar_dashboard():
     st.header("Tipos de energias")
@@ -33,7 +33,7 @@ def mostrar_preguntas(preguntas, juego):
         st.balloons()
         st.session_state["pantalla"] = "dashboard"
 
-preguntas_☀️Solar🪟 = [
+preguntas_Solar = [
     {"pregunta":"¿Qué tipo de tecnología utiliza la energía solar?",
      "opciones":["pirolisis y carbonización","multiplicadora","mecánica","fotovoltaica"],
      "correcta":"fotovoltaica"},
