@@ -1,5 +1,5 @@
 import streamlit as st
-st.title("🌱 EcoAprende Juegos de Energías")
+st.title("🌱 EcoAprende de Energías")
 progreso = {"Solar": {"completado": False, "puntaje": 0},
     "Eolica": {"completado": False, "puntaje": 0},
     "Hidraulica": {"completado": False, "puntaje": 0},
