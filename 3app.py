@@ -69,11 +69,9 @@ def mostrar_preguntas(preguntas, juego):
             Puede convertirse en biogás o bioenergía, ayudando a reducir residuos y generar energía renovable.
             """)
 
-st.info("Regresando al menú principal...")
-        st.session_state["pantalla"] = "dashboard"
-
         # -----------------------------------------------
-    
+        st.info("Regresando al menú principal...")
+        st.session_state["pantalla"] = "dashboard"
 
 
 # --- PREGUNTAS ---
@@ -195,7 +193,7 @@ preguntas_biomasa = [
      "correcta":"Metano"},
 ]
 
-# --- CONTROL DE PANTALLAS ---
+
 
 if "pantalla" not in st.session_state:
     st.session_state["pantalla"] = "dashboard"
@@ -210,5 +208,4 @@ elif st.session_state["pantalla"] == "Hidraulica":
     mostrar_preguntas(preguntas_hidraulica, "Hidraulica")
 elif st.session_state["pantalla"] == "Biomasa":
     mostrar_preguntas(preguntas_biomasa, "Biomasa")
-
 
