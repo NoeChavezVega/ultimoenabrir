@@ -179,12 +179,24 @@ preguntas_biomasa = [{"pregunta":"¿Qué es la biomasa?",
     {"pregunta":"¿Qué energía se obtiene al quemarla?",
      "opciones":["Eléctrica","Térmica","Nuclear","Eólica"],
      "correcta":"Térmica"},
-    {"pregunta":"Ventaja:",
+    {"pregunta":"¿Cuál es una ventaja del uso de biomasa?:",
      "opciones":["CO₂ fósil alto","Es renovable","Se agota rápido","Requiere petróleo"],
      "correcta":"Es renovable"},
     {"pregunta":"Gas producido en digestión anaerobia:",
      "opciones":["Nitrógeno","Oxígeno","Metano","Ozono"],
-     "correcta":"Metano"},]
+     "correcta":"Metano"},
+    {"pregunta":"¿Cuál de los siguientes recursos NO es biomasa?",
+     "opciones":["Residuos agrícolas","Madera","Restos de comida","Hierro mineral "],
+     "correcta":"Hierro mineral "},
+    {"pregunta":"¿Qué proceso convierte residuos orgánicos húmedos en biogás?",
+     "opciones":["Evaporación"," Digestión anaerobia ","Destilación","Pirólisis "],
+     "correcta":"Digestión anaerobia "},
+    {"pregunta":"¿Qué combustible se obtiene de algunos cultivos como el maíz o la caña de azúcar",
+     "opciones":["Diesel fósil","Etanol  ","Propano","Gasolina "],
+     "correcta":"Etanol"},
+
+    
+    
 
 if "pantalla" not in st.session_state:
     st.session_state["pantalla"] = "dashboard"
