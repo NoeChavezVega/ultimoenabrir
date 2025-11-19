@@ -64,7 +64,7 @@ preguntas_solar = [
     {"pregunta":"¿Cuál es una desventaja de la energía solar?",
      "opciones":["Produce gases contaminantes","Depende de la radiación solar ","Emite ruido durante la generación","Requiere combustibles fósiles"],
      "correcta":"Depende de la radiación solar"},
-    if st.session_state["pantalla"] == "dashboard":
+if st.session_state["pantalla"] == "dashboard":
     mostrar_dashboard()
 
 elif st.session_state["pantalla"] == "Solar":
@@ -73,7 +73,8 @@ elif st.session_state["pantalla"] == "Solar":
     st.markdown("""
         Chihuahua, con su alto índice de días soleados, tiene un **potencial solar enorme**.  
         Grandes proyectos como parques solares aprovechan esta ventaja.
-    """)]
+    """)
+
 
 preguntas_eolica = [{"pregunta":"¿Qué tipo de energía aprovechan los aerogeneradores?",
      "opciones":["Energía solar","Energía del viento","Energía hidráulica","Energía geotérmica"],
