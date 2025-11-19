@@ -70,14 +70,10 @@ def mostrar_preguntas(preguntas, juego):
             """)
 
         # -----------------------------------------------
-        st.info("Regresando al menú principal...")
+        st.info("Picale denuevo a enviar, no seas flojo")
         st.session_state["pantalla"] = "dashboard"
 
-
-# --- PREGUNTAS ---
-
-preguntas_solar = [
-    {"pregunta":"¿Qué tipo de tecnología utiliza la energía solar?",
+preguntas_solar = [{"pregunta":"¿Qué tipo de tecnología utiliza la energía solar?",
      "opciones":["pirolisis y carbonización","multiplicadora","mecánica","fotovoltaica"],
      "correcta":"fotovoltaica"},
     {"pregunta":"¿Qué hacen los electrones liberados en las placas?",
@@ -106,11 +102,9 @@ preguntas_solar = [
      "correcta":"Buena orientación al Sol"},
     {"pregunta":"¿Cuál es una desventaja de la energía solar?",
      "opciones":["Produce gases","Depende de la radiación solar","Emite ruido","Usa combustibles"],
-     "correcta":"Depende de la radiación solar"},
-]
+     "correcta":"Depende de la radiación solar"},]
 
-preguntas_eolica = [
-    {"pregunta":"¿Qué energía aprovechan los aerogeneradores?",
+preguntas_eolica = [{"pregunta":"¿Qué energía aprovechan los aerogeneradores?",
      "opciones":["Solar","Viento","Hidráulica","Geotérmica"],
      "correcta":"Viento"},
     {"pregunta":"¿Qué parte recibe la fuerza del viento?",
@@ -139,11 +133,9 @@ preguntas_eolica = [
      "correcta":"Sensores con sistema automático"},
     {"pregunta":"¿Qué países tienen mayor potencial eólico?",
      "opciones":["Sin costas","Con viento constante","Desérticos","Muy húmedos"],
-     "correcta":"Con viento constante"},
-]
+     "correcta":"Con viento constante"},]
 
-preguntas_hidraulica = [
-    {"pregunta":"¿Qué energía aprovechan las hidroeléctricas?",
+preguntas_hidraulica = [{"pregunta":"¿Qué energía aprovechan las hidroeléctricas?",
      "opciones":["Térmica","Movimiento del agua","Solar","Química"],
      "correcta":"Movimiento del agua"},
     {"pregunta":"¿Qué estructura almacena agua?",
@@ -172,11 +164,9 @@ preguntas_hidraulica = [
      "correcta":"Compuerta"},
     {"pregunta":"¿Dónde se instalan?",
      "opciones":["Sin agua","Montañas sin ríos","Ríos o presas","Desiertos"],
-     "correcta":"Ríos o presas"},
-]
+     "correcta":"Ríos o presas"},]
 
-preguntas_biomasa = [
-    {"pregunta":"¿Qué es la biomasa?",
+preguntas_biomasa = [{"pregunta":"¿Qué es la biomasa?",
      "opciones":["Energía solar","Materia orgánica como energía","Energía eólica","Rocas energéticas"],
      "correcta":"Materia orgánica como energía"},
     {"pregunta":"Ejemplo de biomasa:",
@@ -190,14 +180,10 @@ preguntas_biomasa = [
      "correcta":"Es renovable"},
     {"pregunta":"Gas producido en digestión anaerobia:",
      "opciones":["Nitrógeno","Oxígeno","Metano","Ozono"],
-     "correcta":"Metano"},
-]
-
-
+     "correcta":"Metano"},]
 
 if "pantalla" not in st.session_state:
     st.session_state["pantalla"] = "dashboard"
-
 if st.session_state["pantalla"] == "dashboard":
     mostrar_dashboard()
 elif st.session_state["pantalla"] == "Solar":
