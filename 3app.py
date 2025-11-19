@@ -5,8 +5,7 @@ progreso = {
     "Solar": {"completado": False, "puntaje": 0},
     "Eolica": {"completado": False, "puntaje": 0},
     "Hidraulica": {"completado": False, "puntaje": 0},
-    "Biomasa": {"completado": False, "puntaje": 0},
-}
+    "Biomasa": {"completado": False, "puntaje": 0},}
 
 def mostrar_dashboard():
     st.header("Tipos de energías")
@@ -28,7 +27,6 @@ def mostrar_preguntas(preguntas, juego):
         respuesta_usuario = st.radio(pregunta, opciones, key=key_radio)
         respuestas_usuario[i] = respuesta_usuario
 
-    # --- BOTÓN ENVIAR RESPUESTAS ---
     if st.button("Enviar respuestas", key=f"enviar_{juego}"):
         for i, item in enumerate(preguntas):
             if respuestas_usuario[i] == item["correcta"]:
@@ -40,13 +38,15 @@ def mostrar_preguntas(preguntas, juego):
         st.success(f"Juego completado. Ganaste {puntaje} puntos 🎉")
         st.balloons()
 
-        # --- INFORMACIÓN EXTRA DESPUÉS DE TERMINAR ---
         if juego == "Solar":
             st.markdown("### ☀️ Información sobre la energía solar")
-            st.write("""
-            La energía solar utiliza paneles fotovoltaicos para transformar la luz del sol en electricidad.
-            Es una fuente renovable, silenciosa y limpia, ideal para hogares y empresas.
-            """)
+            st.write("""En el estado de Chihuahua, las energías renovables aportan una variedad de beneficios importantes gracias a las características propias del territorio. 
+            La energía solar destaca especialmente porque el estado recibe una de las radiaciones solares más altas del país, 
+            lo que permite que los paneles generen electricidad de manera muy eficiente. 
+            Esto se traduce en ahorros económicos para hogares y empresas, 
+            reducción considerable de emisiones de CO₂ y atracción de inversiones para granjas solares que han impulsado el empleo local. 
+            Además, ha permitido llevar energía a comunidades rurales que antes no contaban con servicio eléctrico, 
+            mejorando su calidad de vida y fortaleciendo la independencia energética del estado""")
 
         elif juego == "Eolica":
             st.markdown("### 🌬️ Información sobre la energía eólica")
@@ -69,7 +69,6 @@ def mostrar_preguntas(preguntas, juego):
             Puede convertirse en biogás o bioenergía, ayudando a reducir residuos y generar energía renovable.
             """)
 
-        # -----------------------------------------------
         st.info("Picale denuevo a enviar, no seas flojo")
         st.session_state["pantalla"] = "dashboard"
 
