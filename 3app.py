@@ -1,12 +1,10 @@
 import streamlit as st
 st.title("🌱 EcoAprende de Energías🔌")
-
 progreso = {
     "Solar": {"completado": False, "puntaje": 0},
     "Eolica": {"completado": False, "puntaje": 0},
     "Hidraulica": {"completado": False, "puntaje": 0},
     "Biomasa": {"completado": False, "puntaje": 0},}
-
 def mostrar_dashboard():
     st.header("Tipos de energías")
     st.subheader("Selecciona una energía:")
@@ -14,24 +12,20 @@ def mostrar_dashboard():
         nombre_mostrar = f"{juego} {'✔️' if data['completado'] else ''}"
         if st.button(nombre_mostrar, key=f"boton_{juego}"):
             st.session_state["pantalla"] = juego
-
 def mostrar_preguntas(preguntas, juego):
     st.header(f"Juego: {juego}")
     puntaje = 0
     respuestas_usuario = {}
-
     for i, item in enumerate(preguntas):
         pregunta = item["pregunta"]
         opciones = item["opciones"]
         key_radio = f"{juego}_{i}"
         respuesta_usuario = st.radio(pregunta, opciones, key=key_radio)
         respuestas_usuario[i] = respuesta_usuario
-
     if st.button("Enviar respuestas", key=f"enviar_{juego}"):
         for i, item in enumerate(preguntas):
             if respuestas_usuario[i] == item["correcta"]:
                 puntaje += 1
-
         progreso[juego]["completado"] = True
         progreso[juego]["puntaje"] = puntaje
 
@@ -207,9 +201,6 @@ preguntas_biomasa = [{"pregunta":"¿Qué es la biomasa?",
      "opciones":[" Caldera ","Aerogenerador  "," Biodigestor","Transformador "],
      "correcta":" Biodigestor "},]
 
-    
-    
-
 if "pantalla" not in st.session_state:
     st.session_state["pantalla"] = "dashboard"
 if st.session_state["pantalla"] == "dashboard":
@@ -222,4 +213,3 @@ elif st.session_state["pantalla"] == "Hidraulica":
     mostrar_preguntas(preguntas_hidraulica, "Hidraulica")
 elif st.session_state["pantalla"] == "Biomasa":
     mostrar_preguntas(preguntas_biomasa, "Biomasa")
-
