@@ -106,4 +106,4 @@ elif st.session_state["pantalla"] == "Hidraulica":
     mostrar_preguntas(preguntas_hidraulica, "Hidraulica")
 elif st.session_state["pantalla"] == "Biomasa":
     mostrar_preguntas(preguntas_biomasa, "Biomasa")
-st.image("https://images.unsplash.com/photo-1509391007205-d143c7b80b2a"
+st.image("https://images.unsplash.com/photo-1509391007205-d143c7b80b2a")
