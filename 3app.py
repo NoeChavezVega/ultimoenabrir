@@ -178,3 +178,47 @@ elif st.session_state["pantalla"] == "Hidraulica":
     mostrar_preguntas(preguntas_hidraulica, "Hidraulica")
 elif st.session_state["pantalla"] == "Biomasa":
     mostrar_preguntas(preguntas_biomasa, "Biomasa")
+
+if st.button("Enviar respuestas", key=f"enviar_{juego}"):
+    for i, item in enumerate(preguntas):
+        if respuestas_usuario[i] == item["correcta"]:
+            puntaje += 1
+
+    progreso[juego]["completado"] = True
+    progreso[juego]["puntaje"] = puntaje
+
+    st.success(f"Juego completado. Ganaste {puntaje} puntos.")
+    st.balloons()
+
+    # --- INFORMACIÓN EXTRA DESPUÉS DE TERMINAR ---
+    if juego == "Solar":
+        st.markdown("### ☀️ Información sobre la energía solar")
+        st.write("""
+        La energía solar aprovecha la radiación del sol para generar electricidad mediante paneles fotovoltaicos.
+        Es una de las energías renovables más limpias y silenciosas, además de ser accesible para hogares y empresas.
+        """)
+
+    elif juego == "Eolica":
+        st.markdown("### 🌬️ Información sobre la energía eólica")
+        st.write("""
+        La energía eólica transforma el movimiento del viento en electricidad usando aerogeneradores.
+        Es eficiente, renovable y una de las tecnologías con mayor crecimiento en el mundo.
+        """)
+
+    elif juego == "Hidraulica":
+        st.markdown("### 💧 Información sobre la energía hidráulica")
+        st.write("""
+        La energía hidráulica utiliza la fuerza del agua para mover turbinas que generan electricidad.
+        Es muy estable y permite almacenar energía en embalses.
+        """)
+
+    elif juego == "Biomasa":
+        st.markdown("### 🌿 Información sobre la biomasa")
+        st.write("""
+        La biomasa aprovecha materia orgánica como residuos agrícolas, madera o desechos orgánicos para generar calor o biogás.
+        Ayuda a reducir residuos y puede ser una alternativa renovable en zonas rurales.
+        """)
+    # ---------------------------------------------------
+
+    st.session_state["pantalla"] = "dashboard"
+
