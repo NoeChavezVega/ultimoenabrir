@@ -65,7 +65,7 @@ preguntas_solar = [
      "opciones":["Produce gases contaminantes","Depende de la radiación solar ","Emite ruido durante la generación","Requiere combustibles fósiles"],
      "correcta":"Depende de la radiación solar"},
 if st.session_state["pantalla"] == "dashboard":
-    mostrar_dashboard()
+    mostrar_dashboard()]
 
 elif st.session_state["pantalla"] == "Solar":
     mostrar_preguntas(preguntas_solar, "Solar")
