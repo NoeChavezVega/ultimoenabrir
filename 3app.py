@@ -64,8 +64,6 @@ preguntas_solar = [
     {"pregunta":"¿Cuál es una desventaja de la energía solar?",
      "opciones":["Produce gases contaminantes","Depende de la radiación solar ","Emite ruido durante la generación","Requiere combustibles fósiles"],
      "correcta":"Depende de la radiación solar"},]
-    
-
 
 preguntas_eolica = [{"pregunta":"¿Qué tipo de energía aprovechan los aerogeneradores?",
      "opciones":["Energía solar","Energía del viento","Energía hidráulica","Energía geotérmica"],
@@ -75,7 +73,11 @@ preguntas_eolica = [{"pregunta":"¿Qué tipo de energía aprovechan los aerogene
      "correcta":"Palas"},
     {"pregunta":"¿Qué mide un anemómetro en un parque eólico?",
      "opciones":["La presión atmosférica","La temperatura","La velocidad del viento","La humedad"],
-     "correcta":"La velocidad del viento"},]
+     "correcta":"La velocidad del viento"},
+    {"pregunta":"¿Cuál de estos es un beneficio de la energía eólica?",
+     "opciones":["Produce gases tóxicos","Utiliza combustibles fósiles","Es una fuente renovable","Consume grandes cantidades de agua"],
+     "correcta":"Es una fuente renovable"},]
+    
 
 preguntas_hidraulica = [
     {"pregunta":"¿Qué tipo de energía aprovechan las plantas hidroeléctricas?",
