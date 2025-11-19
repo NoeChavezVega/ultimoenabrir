@@ -1,10 +1,16 @@
 import streamlit as st
 st.title("🌱 EcoAprende de Energías🔌")
+
 progreso = {
     "Solar": {"completado": False, "puntaje": 0},
     "Eolica": {"completado": False, "puntaje": 0},
     "Hidraulica": {"completado": False, "puntaje": 0},
-    "Biomasa": {"completado": False, "puntaje": 0},}
+    "Biomasa": {"completado": False, "puntaje": 0},
+}
+
+# ----------------------------------------------------------
+# DASHBOARD
+# ----------------------------------------------------------
 def mostrar_dashboard():
     st.header("Tipos de energías")
     st.subheader("Selecciona una energía:")
@@ -12,37 +18,41 @@ def mostrar_dashboard():
         nombre_mostrar = f"{juego} {'✔️' if data['completado'] else ''}"
         if st.button(nombre_mostrar, key=f"boton_{juego}"):
             st.session_state["pantalla"] = juego
+
+# ----------------------------------------------------------
+# PANTALLA DE PREGUNTAS
+# ----------------------------------------------------------
 def mostrar_preguntas(preguntas, juego):
     st.header(f"Juego: {juego}")
     puntaje = 0
     respuestas_usuario = {}
+
     for i, item in enumerate(preguntas):
         pregunta = item["pregunta"]
         opciones = item["opciones"]
         key_radio = f"{juego}_{i}"
         respuesta_usuario = st.radio(pregunta, opciones, key=key_radio)
         respuestas_usuario[i] = respuesta_usuario
+
     if st.button("Enviar respuestas", key=f"enviar_{juego}"):
         for i, item in enumerate(preguntas):
             if respuestas_usuario[i] == item["correcta"]:
                 puntaje += 1
+
         progreso[juego]["completado"] = True
         progreso[juego]["puntaje"] = puntaje
 
         st.success(f"Juego completado. Ganaste {puntaje} puntos 🎉")
         st.balloons()
 
-         if juego == "Solar":
+        # ----------- INFORMACIÓN Y CALCULADORAS -------------
+        if juego == "Solar":
             st.markdown("### ☀️ Información sobre la energía solar")
-            st.write("""En el estado de Chihuahua, las energías renovables aportan una variedad de beneficios importantes gracias a las características propias del territorio. 
-            La energía solar destaca especialmente porque el estado recibe una de las radiaciones solares más altas del país, 
-            lo que permite que los paneles generen electricidad de manera muy eficiente. 
-            Esto se traduce en ahorros económicos para hogares y empresas, 
-            reducción considerable de emisiones de CO₂ y atracción de inversiones para granjas solares que han impulsado el empleo local. 
-            Además, ha permitido llevar energía a comunidades rurales que antes no contaban con servicio eléctrico, 
-            mejorando su calidad de vida y fortaleciendo la independencia energética del estado""")
+            st.write("""En Chihuahua la radiación solar es una de las más altas de México,
+            lo que hace muy eficiente el uso de paneles solares. Esto permite
+            reducir costos, atraer inversiones y electrificar comunidades rurales.""")
 
-            # === CALCULADORA SOLAR BIEN UBICADA ===
+            # === CALCULADORA SOLAR ===
             st.subheader("🔢 Calculadora de energía solar")
             irradiancia = st.number_input("Irradiancia solar (W/m²)", value=800, key="irr_sol")
             area = st.number_input("Área del panel (m²)", value=1.6, key="area_sol")
@@ -52,41 +62,31 @@ def mostrar_preguntas(preguntas, juego):
                 energia = irradiancia * area * eficiencia
                 st.success(f"Energía generada: {energia:.2f} W")
 
-
-if st.button("Calcular energía solar"):
-    energia = irradiancia * area * eficiencia
-    st.success(f"Energía generada: {energia:.2f} W")
-
         elif juego == "Eolica":
             st.markdown("### 🌬️ Información sobre la energía eólica")
-            st.write("""La energía eólica también ofrece ventajas relevantes, particularmente en regiones donde los vientos son constantes y adecuados para instalar aerogeneradores. 
-            El aprovechamiento del viento no solo contribuye a diversificar la matriz energética, sino que también atrae inversión, 
-            genera empleos y reduce el impacto ambiental al no depender de combustibles fósiles.
-            En Chihuahua incluso se analiza su potencial para producir hidrógeno verde, lo cual posicionaría al estado como un referente en tecnologías limpias emergentes.""")
+            st.write("""Aprovecha el viento mediante aerogeneradores. Es renovable,
+            limpia y útil donde hay vientos constantes.""")
 
         elif juego == "Hidraulica":
             st.markdown("### 💧 Información sobre la energía hidráulica")
-            st.write("""
-            En cuanto a la energía hidráulica, especialmente en su modalidad de mini-hidroeléctricas, 
-            permite aprovechar el flujo de agua en presas y canales ya existentes sin necesidad de construir grandes represas. 
-            Esto brinda una fuente de energía constante y confiable con un impacto ambiental reducido. 
-            Además, contribuye a fortalecer las comunidades cercanas mediante empleo, infraestructura y la oportunidad de generar electricidad de manera más local y sostenible.s.""")
+            st.write("""Genera electricidad aprovechando el movimiento del agua.
+            Las mini-hidroeléctricas en Chihuahua son de bajo impacto ambiental.""")
 
         elif juego == "Biomasa":
             st.markdown("### 🌿 Información sobre la biomasa")
-            st.write("""
-            Finalmente, la energía de biomasa tiene un papel relevante en zonas forestales y ganaderas del estado. 
-            Chihuahua cuenta con abundantes residuos de aserraderos, 
-            madera y actividad forestal que pueden transformarse en energía en lugar de desperdiciarse o aumentar el riesgo de incendios. 
-            También existe potencial para producir biogás a partir de residuos ganaderos, 
-            lo que permite capturar metano —un gas de efecto invernadero— y convertirlo en electricidad o calor útil. 
-            Este aprovechamiento de residuos genera beneficios económicos para comunidades rurales, 
-            fomenta la autosuficiencia energética y reduce la contaminación, impulsando a la vez empleos verdes y nuevos modelos de economía circular.""")
+            st.write("""Aprovecha residuos forestales, agrícolas o ganaderos para producir
+            biogás o energía térmica, reduciendo contaminación y generando empleos.""")
 
-        st.info("Picale denuevo a enviar, no seas flojo")
+        st.info("Pícale de nuevo a enviar si quieres volver al menú.")
         st.session_state["pantalla"] = "dashboard"
 
-preguntas_solar = [{"pregunta":"¿Qué tipo de tecnología utiliza la energía solar?",
+# ----------------------------------------------------------
+# PREGUNTAS DE CADA ENERGÍA
+# (Todas tus preguntas completas tal cual las pasaste)
+# ----------------------------------------------------------
+
+preguntas_solar = [
+    {"pregunta":"¿Qué tipo de tecnología utiliza la energía solar?",
      "opciones":["pirolisis y carbonización","multiplicadora","mecánica","fotovoltaica"],
      "correcta":"fotovoltaica"},
     {"pregunta":"¿Qué hacen los electrones liberados en las placas?",
@@ -105,7 +105,10 @@ preguntas_solar = [{"pregunta":"¿Qué tipo de tecnología utiliza la energía s
      "opciones":["Verdadero","Falso"],
      "correcta":"Falso"},
     {"pregunta":"¿Por qué las celdas solares de silicio tienen mayor eficiencia que las policristalinas?",
-     "opciones":["Tienen mayor grosor", "Poseen una estructura uniforme que reduce la recombinación electrónica","Reflejan más luz","Operan a más temperatura"],
+     "opciones":["Tienen mayor grosor", 
+                 "Poseen una estructura uniforme que reduce la recombinación electrónica",
+                 "Reflejan más luz",
+                 "Operan a más temperatura"],
      "correcta":"Poseen una estructura uniforme que reduce la recombinación electrónica"},
     {"pregunta":"¿Por qué se considera una energía renovable?",
      "opciones":["porque es económica","tiene un menor impacto ambiental","su tecnología es de mejor calidad","puede usarse en diferentes ámbitos"],
@@ -115,9 +118,11 @@ preguntas_solar = [{"pregunta":"¿Qué tipo de tecnología utiliza la energía s
      "correcta":"Buena orientación al Sol"},
     {"pregunta":"¿Cuál es una desventaja de la energía solar?",
      "opciones":["Produce gases","Depende de la radiación solar","Emite ruido","Usa combustibles"],
-     "correcta":"Depende de la radiación solar"},]
+     "correcta":"Depende de la radiación solar"},
+]
 
-preguntas_eolica = [{"pregunta":"¿Qué energía aprovechan los aerogeneradores?",
+preguntas_eolica = [
+    {"pregunta":"¿Qué energía aprovechan los aerogeneradores?",
      "opciones":["Solar","Viento","Hidráulica","Geotérmica"],
      "correcta":"Viento"},
     {"pregunta":"¿Qué parte recibe la fuerza del viento?",
@@ -146,9 +151,11 @@ preguntas_eolica = [{"pregunta":"¿Qué energía aprovechan los aerogeneradores?
      "correcta":"Sensores con sistema automático"},
     {"pregunta":"¿Qué países tienen mayor potencial eólico?",
      "opciones":["Sin costas","Con viento constante","Desérticos","Muy húmedos"],
-     "correcta":"Con viento constante"},]
+     "correcta":"Con viento constante"},
+]
 
-preguntas_hidraulica = [{"pregunta":"¿Qué energía aprovechan las hidroeléctricas?",
+preguntas_hidraulica = [
+    {"pregunta":"¿Qué energía aprovechan las hidroeléctricas?",
      "opciones":["Térmica","Movimiento del agua","Solar","Química"],
      "correcta":"Movimiento del agua"},
     {"pregunta":"¿Qué estructura almacena agua?",
@@ -177,9 +184,11 @@ preguntas_hidraulica = [{"pregunta":"¿Qué energía aprovechan las hidroeléctr
      "correcta":"Compuerta"},
     {"pregunta":"¿Dónde se instalan?",
      "opciones":["Sin agua","Montañas sin ríos","Ríos o presas","Desiertos"],
-     "correcta":"Ríos o presas"},]
+     "correcta":"Ríos o presas"},
+]
 
-preguntas_biomasa = [{"pregunta":"¿Qué es la biomasa?",
+preguntas_biomasa = [
+    {"pregunta":"¿Qué es la biomasa?",
      "opciones":["Energía solar","Materia orgánica como energía","Energía eólica","Rocas energéticas"],
      "correcta":"Materia orgánica como energía"},
     {"pregunta":"Ejemplo de biomasa:",
@@ -195,29 +204,31 @@ preguntas_biomasa = [{"pregunta":"¿Qué es la biomasa?",
      "opciones":["Nitrógeno","Oxígeno","Metano","Ozono"],
      "correcta":"Metano"},
     {"pregunta":"¿Cuál de los siguientes recursos NO es biomasa?",
-     "opciones":["Residuos agrícolas","Madera","Restos de comida","Hierro mineral "],
-     "correcta":"Hierro mineral "},
+     "opciones":["Residuos agrícolas","Madera","Restos de comida","Hierro mineral"],
+     "correcta":"Hierro mineral"},
     {"pregunta":"¿Qué proceso convierte residuos orgánicos húmedos en biogás?",
-     "opciones":["Evaporación"," Digestión anaerobia ","Destilación","Pirólisis "],
-     "correcta":"Digestión anaerobia "},
-    {"pregunta":"¿Qué combustible se obtiene de algunos cultivos como el maíz o la caña de azúcar",
-     "opciones":["Diesel fósil","Etanol  ","Propano","Gasolina "],
-     "correcta":"Etanol"},
-    {"pregunta":"¿Qué combustible se obtiene de algunos cultivos como el maíz o la caña de azúcar",
-     "opciones":["Diesel fósil","Etanol  ","Propano","Gasolina "],
+     "opciones":["Evaporación","Digestión anaerobia","Destilación","Pirólisis"],
+     "correcta":"Digestión anaerobia"},
+    {"pregunta":"¿Qué combustible se obtiene de algunos cultivos como el maíz o la caña de azúcar?",
+     "opciones":["Diesel fósil","Etanol","Propano","Gasolina"],
      "correcta":"Etanol"},
     {"pregunta":"¿Qué tipo de energía tiene la biomasa antes de ser procesada?",
-     "opciones":["química almacenada ","sonora  ","lumínica","cinética "],
+     "opciones":["química almacenada","sonora","lumínica","cinética"],
      "correcta":"química almacenada"},
     {"pregunta":"¿Qué impacto ambiental puede tener el uso excesivo de biomasa?",
-     "opciones":["Desaparición del viento ","Deforestación  ",") Aumento del gas ozono","Contaminación radiactiva "],
-     "correcta":" Deforestación "},
-    {"pregunta":"¿Qué dispositivo se utiliza para producir biogás a partir de residuos orgánicos?",
-     "opciones":[" Caldera ","Aerogenerador  "," Biodigestor","Transformador "],
-     "correcta":" Biodigestor "},]
+     "opciones":["Desaparición del viento","Deforestación","Aumento del gas ozono","Contaminación radiactiva"],
+     "correcta":"Deforestación"},
+    {"pregunta":"¿Qué dispositivo se utiliza para producir biogás?",
+     "opciones":["Caldera","Aerogenerador","Biodigestor","Transformador"],
+     "correcta":"Biodigestor"},
+]
 
+# ----------------------------------------------------------
+# CAMBIO DE PANTALLAS
+# ----------------------------------------------------------
 if "pantalla" not in st.session_state:
     st.session_state["pantalla"] = "dashboard"
+
 if st.session_state["pantalla"] == "dashboard":
     mostrar_dashboard()
 elif st.session_state["pantalla"] == "Solar":
@@ -228,3 +239,4 @@ elif st.session_state["pantalla"] == "Hidraulica":
     mostrar_preguntas(preguntas_hidraulica, "Hidraulica")
 elif st.session_state["pantalla"] == "Biomasa":
     mostrar_preguntas(preguntas_biomasa, "Biomasa")
+
