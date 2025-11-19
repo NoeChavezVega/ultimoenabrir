@@ -64,6 +64,11 @@ preguntas_solar = [
     {"pregunta":"¿Cuál es una desventaja de la energía solar?",
      "opciones":["Produce gases contaminantes","Depende de la radiación solar ","Emite ruido durante la generación","Requiere combustibles fósiles"],
      "correcta":"Depende de la radiación solar"},]
+st.subheader("Beneficios para Chihuahua")
+        st.markdown("""
+        Chihuahua, con su alto índice de días soleados, tiene un **potencial solar enorme**. 
+        Grandes proyectos como parques solares aprovechan esta ventaja para la generación a gran escala.
+        """)
 
 preguntas_eolica = [{"pregunta":"¿Qué tipo de energía aprovechan los aerogeneradores?",
      "opciones":["Energía solar","Energía del viento","Energía hidráulica","Energía geotérmica"],
