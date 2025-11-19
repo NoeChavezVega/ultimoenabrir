@@ -50,24 +50,29 @@ def mostrar_preguntas(preguntas, juego):
 
         elif juego == "Eolica":
             st.markdown("### 🌬️ Información sobre la energía eólica")
-            st.write("""
-            La energía eólica transforma la energía del viento en electricidad mediante aerogeneradores.
-            Es una de las energías renovables con mayor crecimiento en el mundo.
-            """)
+            st.write("""La energía eólica también ofrece ventajas relevantes, particularmente en regiones donde los vientos son constantes y adecuados para instalar aerogeneradores. 
+            El aprovechamiento del viento no solo contribuye a diversificar la matriz energética, sino que también atrae inversión, 
+            genera empleos y reduce el impacto ambiental al no depender de combustibles fósiles.
+            En Chihuahua incluso se analiza su potencial para producir hidrógeno verde, lo cual posicionaría al estado como un referente en tecnologías limpias emergentes.""")
 
         elif juego == "Hidraulica":
             st.markdown("### 💧 Información sobre la energía hidráulica")
             st.write("""
-            Aprovecha la fuerza del agua en movimiento para generar electricidad usando turbinas.
-            Es eficiente, estable y ampliamente utilizada en presas y ríos caudalosos.
-            """)
+            En cuanto a la energía hidráulica, especialmente en su modalidad de mini-hidroeléctricas, 
+            permite aprovechar el flujo de agua en presas y canales ya existentes sin necesidad de construir grandes represas. 
+            Esto brinda una fuente de energía constante y confiable con un impacto ambiental reducido. 
+            Además, contribuye a fortalecer las comunidades cercanas mediante empleo, infraestructura y la oportunidad de generar electricidad de manera más local y sostenible.s.""")
 
         elif juego == "Biomasa":
             st.markdown("### 🌿 Información sobre la biomasa")
             st.write("""
-            La biomasa es materia orgánica como residuos agrícolas, madera o desechos.
-            Puede convertirse en biogás o bioenergía, ayudando a reducir residuos y generar energía renovable.
-            """)
+            Finalmente, la energía de biomasa tiene un papel relevante en zonas forestales y ganaderas del estado. 
+            Chihuahua cuenta con abundantes residuos de aserraderos, 
+            madera y actividad forestal que pueden transformarse en energía en lugar de desperdiciarse o aumentar el riesgo de incendios. 
+            También existe potencial para producir biogás a partir de residuos ganaderos, 
+            lo que permite capturar metano —un gas de efecto invernadero— y convertirlo en electricidad o calor útil. 
+            Este aprovechamiento de residuos genera beneficios económicos para comunidades rurales, 
+            fomenta la autosuficiencia energética y reduce la contaminación, impulsando a la vez empleos verdes y nuevos modelos de economía circular.""")
 
         st.info("Picale denuevo a enviar, no seas flojo")
         st.session_state["pantalla"] = "dashboard"
