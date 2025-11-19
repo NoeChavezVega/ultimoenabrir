@@ -41,11 +41,17 @@ def mostrar_preguntas(preguntas, juego):
             reducción considerable de emisiones de CO₂ y atracción de inversiones para granjas solares que han impulsado el empleo local. 
             Además, ha permitido llevar energía a comunidades rurales que antes no contaban con servicio eléctrico, 
             mejorando su calidad de vida y fortaleciendo la independencia energética del estado""")
+           
             st.subheader("🔢 Calculadora de energía solar")
+            irradiancia = st.number_input("Irradiancia solar (W/m²)", value=800, key="irr_sol")
+            area = st.number_input("Área del panel (m²)", value=1.6, key="area_sol")
+            eficiencia = st.number_input("Eficiencia (%)", value=18, key="efi_sol") / 100
 
-irradiancia = st.number_input("Irradiancia solar (W/m²)", value=800)
-area = st.number_input("Área del panel (m²)", value=1.6)
-eficiencia = st.number_input("Eficiencia (%)", value=18) / 100
+            if st.button("Calcular energía solar", key="calc_sol"):
+                energia = irradiancia * area * eficiencia
+                st.success(f"Energía generada: {energia:.2f} W")
+
+
 
 if st.button("Calcular energía solar"):
     energia = irradiancia * area * eficiencia
