@@ -1,16 +1,10 @@
 import streamlit as st
 st.title("🌱 EcoAprende de Energías🔌")
-
 progreso = {
     "Solar": {"completado": False, "puntaje": 0},
     "Eolica": {"completado": False, "puntaje": 0},
     "Hidraulica": {"completado": False, "puntaje": 0},
-    "Biomasa": {"completado": False, "puntaje": 0},
-}
-
-# ----------------------------------------------------------
-# DASHBOARD
-# ----------------------------------------------------------
+    "Biomasa": {"completado": False, "puntaje": 0},}
 def mostrar_dashboard():
     st.header("Tipos de energías")
     st.subheader("Selecciona una energía:")
@@ -19,9 +13,6 @@ def mostrar_dashboard():
         if st.button(nombre_mostrar, key=f"boton_{juego}"):
             st.session_state["pantalla"] = juego
 
-# ----------------------------------------------------------
-# PANTALLA DE PREGUNTAS
-# ----------------------------------------------------------
 def mostrar_preguntas(preguntas, juego):
     st.header(f"Juego: {juego}")
     puntaje = 0
@@ -45,7 +36,6 @@ def mostrar_preguntas(preguntas, juego):
         st.success(f"Juego completado. Ganaste {puntaje} puntos 🎉")
         st.balloons()
 
-        # ----------- INFORMACIÓN SIN CALCULADORA -------------
         if juego == "Solar":
             st.markdown("### ☀️ Información sobre la energía solar")
             st.write("""En Chihuahua la radiación solar es de las más altas de México,
@@ -69,10 +59,6 @@ def mostrar_preguntas(preguntas, juego):
 
         st.info("Pícale de nuevo a enviar si quieres volver al menú.")
         st.session_state["pantalla"] = "dashboard"
-
-# ----------------------------------------------------------
-# PREGUNTAS DE CADA ENERGÍA
-# ----------------------------------------------------------
 
 preguntas_solar = [
     {"pregunta":"¿Qué tipo de tecnología utiliza la energía solar?",
@@ -107,8 +93,7 @@ preguntas_solar = [
      "correcta":"Buena orientación al Sol"},
     {"pregunta":"¿Cuál es una desventaja de la energía solar?",
      "opciones":["Produce gases","Depende de la radiación solar","Emite ruido","Usa combustibles"],
-     "correcta":"Depende de la radiación solar"},
-]
+     "correcta":"Depende de la radiación solar"},]
 
 preguntas_eolica = [
     {"pregunta":"¿Qué energía aprovechan los aerogeneradores?",
@@ -140,8 +125,7 @@ preguntas_eolica = [
      "correcta":"Sensores con sistema automático"},
     {"pregunta":"¿Qué países tienen mayor potencial eólico?",
      "opciones":["Sin costas","Con viento constante","Desérticos","Muy húmedos"],
-     "correcta":"Con viento constante"},
-]
+     "correcta":"Con viento constante"},]
 
 preguntas_hidraulica = [
     {"pregunta":"¿Qué energía aprovechan las hidroeléctricas?",
@@ -173,8 +157,7 @@ preguntas_hidraulica = [
      "correcta":"Compuerta"},
     {"pregunta":"¿Dónde se instalan?",
      "opciones":["Sin agua","Montañas sin ríos","Ríos o presas","Desiertos"],
-     "correcta":"Ríos o presas"},
-]
+     "correcta":"Ríos o presas"},]
 
 preguntas_biomasa = [
     {"pregunta":"¿Qué es la biomasa?",
@@ -209,15 +192,11 @@ preguntas_biomasa = [
      "correcta":"Deforestación"},
     {"pregunta":"¿Qué dispositivo se utiliza para producir biogás?",
      "opciones":["Caldera","Aerogenerador","Biodigestor","Transformador"],
-     "correcta":"Biodigestor"},
-]
+     "correcta":"Biodigestor"},]
 
-# ----------------------------------------------------------
-# CAMBIO DE PANTALLAS
-# ----------------------------------------------------------
+
 if "pantalla" not in st.session_state:
     st.session_state["pantalla"] = "dashboard"
-
 if st.session_state["pantalla"] == "dashboard":
     mostrar_dashboard()
 elif st.session_state["pantalla"] == "Solar":
