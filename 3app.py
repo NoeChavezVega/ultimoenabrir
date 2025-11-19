@@ -51,7 +51,7 @@ preguntas_Solar = [
      "correcta":"Verdadero"},
     {"pregunta":"¿la temperatura afecta el rendimiento de una celda fotovoltaica?",
      "opciones":["Verdadero","Falso"],
-     "correcta":"Falso"},
+     "correcta":"Falso"},]
 
 preguntas_eolica = [{"pregunta":"¿Qué tipo de energía aprovechan los aerogeneradores?",
      "opciones":["Energía solar","Energía del viento","Energía hidráulica","Energía geotérmica"],
