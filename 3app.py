@@ -77,30 +77,24 @@ preguntas_eolica = [{"pregunta":"¿Qué tipo de energía aprovechan los aerogene
     {"pregunta":"¿Cuál de estos es un beneficio de la energía eólica?",
      "opciones":["Produce gases tóxicos","Utiliza combustibles fósiles","Es una fuente renovable","Consume grandes cantidades de agua"],
      "correcta":"Es una fuente renovable"},
-                    {"pregunta":"¿En qué forma se genera la electricidad en un aerogenerador?",
+    {"pregunta":"¿En qué forma se genera la electricidad en un aerogenerador?",
      "opciones":["Combustión interna","Vibraciones mecánicas","Rotación de un eje conectada a un generador","Reacciones químicas"],
      "correcta":"Rotación de un eje conectada a un generador"},
-
     {"pregunta":"¿Cuál es una desventaja de la energía eólica?",
      "opciones":["Requiere petróleo para operar","Depende de la disponibilidad del viento","Produce dióxido de carbono","Solo funciona de noche"],
      "correcta":"Depende de la disponibilidad del viento"},
-
     {"pregunta":"¿Cuál es la función del generador dentro de un aerogenerador?",
      "opciones":["Controlar la orientación de las palas","Convertir energía mecánica en eléctrica","Medir la velocidad del viento","Detener el sistema"],
      "correcta":"Convertir energía mecánica en eléctrica"},
-
     {"pregunta":"¿Qué tipo de energía tiene el viento antes de mover las palas?",
      "opciones":["Energía química","Energía térmica","Energía cinética","Energía sonora"],
      "correcta":"Energía cinética"},
-
     {"pregunta":"¿Cómo se orientan los aerogeneradores hacia el viento?",
      "opciones":["Se mueven manualmente","Con sensores y un sistema de giro automático","Mediante una brújula","Girando por gravedad"],
      "correcta":"Con sensores y un sistema de giro automático"},
-
     {"pregunta":"¿Qué países suelen tener mayor potencial para la energía eólica?",
      "opciones":["Países sin costas","Países con fuertes vientos constantes","Países desérticos sin viento","Países muy húmedos"],
      "correcta":"Países con fuertes vientos constantes"}]
-    
 
 preguntas_hidraulica = [
     {"pregunta":"¿Qué tipo de energía aprovechan las plantas hidroeléctricas?",
@@ -108,7 +102,37 @@ preguntas_hidraulica = [
      "correcta":"Energía del movimiento del agua"},
     {"pregunta":"¿Qué estructura se utiliza para almacenar grandes volúmenes de agua?",
      "opciones":["Pozo","Tubería","Embalse","Sifón"],
-     "correcta":"Embalse"},]
+     "correcta":"Embalse"},
+    {"pregunta": "¿Qué componente convierte la energía del agua en energía mecánica?",
+     "opciones": ["Transformador", "Turbina", "Motor eléctrico", "Condensador"],
+     "correcta": "Turbina"},
+    {"pregunta": "¿Qué se genera cuando la turbina hace girar al generador?",
+     "opciones": ["Calor", "Sonido", "Electricidad", "Aire comprimido"],
+     "correcta": "Electricidad"},
+    {"pregunta": "¿Cuál es un beneficio de la energía hidráulica?",
+     "opciones": ["Produce gases de efecto invernadero", "Es renovable", "Requiere petróleo", "No se puede almacenar"],
+     "correcta": "Es renovable"},
+    {"pregunta": "¿Cuál es una desventaja de la energía hidráulica?",
+     "opciones": ["Produce residuos tóxicos", "Depende del caudal de los ríos", "Requiere combustible", "No es renovable"],
+     "correcta": "Depende del caudal de los ríos"},
+    {"pregunta": "¿Qué nombre recibe la caída de agua que se aprovecha para generar energía?",
+     "opciones": ["Captación", "Precipitación", "Salto hidráulico", "Evaporación"],
+     "correcta": "Salto hidráulico"},
+    {"pregunta": "¿Qué tipo de energía tiene el agua antes de mover la turbina?",
+     "opciones": ["Energía sonora", "Energía química", "Energía potencial y cinética", "Energía térmica"],
+     "correcta": "Energía potencial y cinética"},
+    {"pregunta": "¿Qué componente controla el flujo de agua hacia la turbina?",
+     "opciones": ["Alternador", "Compuerta", "Transformador", "Generador auxiliar"],
+     "correcta": "Compuerta"},
+    {"pregunta": "¿Dónde se instalan típicamente las plantas hidroeléctricas?",
+     "opciones": ["En zonas sin agua", "En montañas sin ríos", "En ríos o presas", "En desiertos"],
+     "correcta": "En ríos o presas"},
+    {"pregunta": "¿Qué mide el caudal de un río?",
+     "opciones": ["La profundidad del agua", "La velocidad del viento", "La cantidad de agua que pasa por segundo", "La temperatura del agua"],
+     "correcta": "La cantidad de agua que pasa por segundo"},
+    {"pregunta": "¿Cómo se llama el proceso de convertir energía mecánica en eléctrica?",
+     "opciones": ["Transformación térmica", "Generación eléctrica", "Compresión", "Filtración"],
+     "correcta": "Generación eléctrica"}]
 
 preguntas_biomasa = [
     {"pregunta":"¿Qué es la biomasa?",
