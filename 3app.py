@@ -2,7 +2,7 @@ import streamlit as st
 st.title("EcoAprende 🌱")
 progreso = {"Solar": {"completado": False, "puntaje": 0},"Eolica": {"completado": False, "puntaje": 0},"Hidraulica": {"completado": False, "puntaje": 0},"Biomasa": {"completado": False, "puntaje": 0}}
 st.subheader("Juegos disponibles")
-st.subtittle("Aprende")
+st.subheader("Aprende de las energias que nos daran un futuro")
 juegos = ["Solar", "Eolica", "Hidraulica", "Biomasa"]
 for j in juegos:
     if f"mostrar_{j}" not in st.session_state:
