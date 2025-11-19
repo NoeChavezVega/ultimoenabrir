@@ -12,7 +12,6 @@ def mostrar_dashboard():
         nombre_mostrar = f"{juego} {'✔️' if data['completado'] else ''}"
         if st.button(nombre_mostrar, key=f"boton_{juego}"):
             st.session_state["pantalla"] = juego
-
 def mostrar_preguntas(preguntas, juego):
     st.header(f"Juego: {juego}")
     puntaje = 0
@@ -70,8 +69,7 @@ def mostrar_preguntas(preguntas, juego):
         st.info("Pícale de nuevo a enviar si quieres volver al menú.")
         st.session_state["pantalla"] = "dashboard"
 
-preguntas_solar = [
-    {"pregunta":"¿Qué tipo de tecnología utiliza la energía solar?",
+preguntas_solar = [{"pregunta":"¿Qué tipo de tecnología utiliza la energía solar?",
      "opciones":["pirolisis y carbonización","multiplicadora","mecánica","fotovoltaica"],
      "correcta":"fotovoltaica"},
     {"pregunta":"¿Qué hacen los electrones liberados en las placas?",
@@ -105,8 +103,7 @@ preguntas_solar = [
      "opciones":["Produce gases","Depende de la radiación solar","Emite ruido","Usa combustibles"],
      "correcta":"Depende de la radiación solar"},]
 
-preguntas_eolica = [
-    {"pregunta":"¿Qué energía aprovechan los aerogeneradores?",
+preguntas_eolica = [{"pregunta":"¿Qué energía aprovechan los aerogeneradores?",
      "opciones":["Solar","Viento","Hidráulica","Geotérmica"],
      "correcta":"Viento"},
     {"pregunta":"¿Qué parte recibe la fuerza del viento?",
@@ -137,8 +134,7 @@ preguntas_eolica = [
      "opciones":["Sin costas","Con viento constante","Desérticos","Muy húmedos"],
      "correcta":"Con viento constante"},]
 
-preguntas_hidraulica = [
-    {"pregunta":"¿Qué energía aprovechan las hidroeléctricas?",
+preguntas_hidraulica = [{"pregunta":"¿Qué energía aprovechan las hidroeléctricas?",
      "opciones":["Térmica","Movimiento del agua","Solar","Química"],
      "correcta":"Movimiento del agua"},
     {"pregunta":"¿Qué estructura almacena agua?",
@@ -169,8 +165,7 @@ preguntas_hidraulica = [
      "opciones":["Sin agua","Montañas sin ríos","Ríos o presas","Desiertos"],
      "correcta":"Ríos o presas"},]
 
-preguntas_biomasa = [
-    {"pregunta":"¿Qué es la biomasa?",
+preguntas_biomasa = [{"pregunta":"¿Qué es la biomasa?",
      "opciones":["Energía solar","Materia orgánica como energía","Energía eólica","Rocas energéticas"],
      "correcta":"Materia orgánica como energía"},
     {"pregunta":"Ejemplo de biomasa:",
@@ -203,7 +198,6 @@ preguntas_biomasa = [
     {"pregunta":"¿Qué dispositivo se utiliza para producir biogás?",
      "opciones":["Caldera","Aerogenerador","Biodigestor","Transformador"],
      "correcta":"Biodigestor"},]
-
 
 if "pantalla" not in st.session_state:
     st.session_state["pantalla"] = "dashboard"
