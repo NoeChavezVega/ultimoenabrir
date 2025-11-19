@@ -193,7 +193,7 @@ preguntas_biomasa = [{"pregunta":"¿Qué es la biomasa?",
      "correcta":"Digestión anaerobia "},
     {"pregunta":"¿Qué combustible se obtiene de algunos cultivos como el maíz o la caña de azúcar",
      "opciones":["Diesel fósil","Etanol  ","Propano","Gasolina "],
-     "correcta":"Etanol"},
+     "correcta":"Etanol"},]
 
     
     
