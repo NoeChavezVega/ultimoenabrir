@@ -69,6 +69,9 @@ def mostrar_preguntas(preguntas, juego):
             Puede convertirse en biogás o bioenergía, ayudando a reducir residuos y generar energía renovable.
             """)
 
+st.info("Regresando al menú principal...")
+        st.session_state["pantalla"] = "dashboard"
+
         # -----------------------------------------------
     
 
