@@ -1,25 +1,18 @@
 import streamlit as st
 st.title("EcoAprende 🌱")
-
-
-progreso = {
-    "Solar": {"completado": False, "puntaje": 0},
-    "Eolica": {"completado": False, "puntaje": 0},
-    "Hidraulica": {"completado": False, "puntaje": 0},
-    "Biomasa": {"completado": False, "puntaje": 0}}
+progreso = {"Solar": {"completado": False, "puntaje": 0},"Eolica": {"completado": False, "puntaje": 0},"Hidraulica": {"completado": False, "puntaje": 0},"Biomasa": {"completado": False, "puntaje": 0}}
 st.subheader("Juegos disponibles")
 
 juegos = ["Solar", "Eolica", "Hidraulica", "Biomasa"]
-
 for j in juegos:
     if f"mostrar_{j}" not in st.session_state:
         st.session_state[f"mostrar_{j}"] = False
 for juego in juegos:
-    estado = "✔️" if progreso[juego]["completado"] else ""
+    estado = "✅" if progreso[juego]["completado"] else ""
     if st.button(f"{juego} {estado}"):
         st.session_state[f"mostrar_{juego}"] = not st.session_state.get(f"mostrar_{juego}", False)
     if st.session_state.get(f"mostrar_{juego}", False):
-        st.header(f"🎮 Juego: Energía {juego}")
+        st.header(f"Juego: Energía {juego}")
         st.write("Responde las preguntas:")
         if juego == "Solar":
             p1 = st.radio(
@@ -80,5 +73,3 @@ for juego in juegos:
             progreso[juego]["puntaje"] = puntaje
             st.success(f"¡Completado {juego}! Puntaje: {puntaje} ⭐")
             st.balloons()
-
-
