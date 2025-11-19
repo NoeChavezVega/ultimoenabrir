@@ -52,11 +52,6 @@ def mostrar_preguntas(preguntas, juego):
                 energia = irradiancia * area * eficiencia
                 st.success(f"Energía generada: {energia:.2f} W")
 
-            if st.button("Calcular energía solar", key="calc_sol"):
-                energia = irradiancia * area * eficiencia
-                st.success(f"Energía generada: {energia:.2f} W")
-
-
 
 if st.button("Calcular energía solar"):
     energia = irradiancia * area * eficiencia
