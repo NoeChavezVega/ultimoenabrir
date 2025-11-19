@@ -99,7 +99,7 @@ preguntas_eolica = [{"pregunta":"¿Qué tipo de energía aprovechan los aerogene
 
     {"pregunta":"¿Qué países suelen tener mayor potencial para la energía eólica?",
      "opciones":["Países sin costas","Países con fuertes vientos constantes","Países desérticos sin viento","Países muy húmedos"],
-     "correcta":"Países con fuertes vientos constantes"}
+     "correcta":"Países con fuertes vientos constantes"}]
     
 
 preguntas_hidraulica = [
