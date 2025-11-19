@@ -28,5 +28,4 @@ if st.session_state.get("mostrar_solar", False):
         progreso["Solar"]["puntaje"] = puntaje
         st.success(f"¡Completado! Puntaje: {puntaje} ⭐")
         st.balloons()
-ll
 
