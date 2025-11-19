@@ -140,7 +140,31 @@ preguntas_biomasa = [
      "correcta":"Materia orgánica utilizada como fuente de energía"},
     {"pregunta":"¿Cuál de los siguientes es un ejemplo de biomasa?",
      "opciones":["Carbón mineral","Aceite vegetal usado","Gas natural","Arena"],
-     "correcta":"Aceite vegetal usado"},]
+     "correcta":"Aceite vegetal usado"},
+    {"pregunta": "¿Qué tipo de energía se obtiene al quemar biomasa?",
+     "opciones": ["Energía eléctrica", "Energía térmica", "Energía nuclear", "Energía eólica"],
+     "correcta": "Energía térmica"},
+    {"pregunta": "¿Cuál es una ventaja del uso de biomasa?",
+     "opciones": ["Produce altos niveles de CO₂ fósil", "Es una fuente renovable", "Se agota rápidamente", "Requiere petróleo para funcionar"],
+     "correcta": "Es una fuente renovable"},
+    {"pregunta": "¿Qué gas se produce en la digestión anaerobia de la biomasa?",
+     "opciones": ["Nitrógeno", "Oxígeno", "Metano", "Ozono"],
+     "correcta": "Metano"},
+    {"pregunta": "¿Cuál de los siguientes recursos NO es biomasa?",
+     "opciones": ["Residuos agrícolas", "Madera", "Restos de comida", "Hierro mineral"],
+     "correcta": "Hierro mineral"},
+    {"pregunta": "¿Qué proceso convierte residuos orgánicos húmedos en biogás?",
+     "opciones": ["Evaporación", "Digestión anaerobia", "Destilación", "Pirólisis"],
+     "correcta": "Digestión anaerobia"},
+    {"pregunta": "¿Qué combustible se obtiene de algunos cultivos como el maíz o la caña de azúcar?",
+     "opciones": ["Diésel fósil", "Etanol", "Propano", "Gasolina"],
+     "correcta": "Etanol"},
+    {"pregunta": "¿Qué tipo de energía tiene la biomasa antes de ser procesada?",
+     "opciones": ["Energía química almacenada", "Energía sonora", "Energía lumínica", "Energía cinética"],
+     "correcta": "Energía química almacenada"},
+    {"pregunta": "¿Qué impacto ambiental puede tener el uso excesivo de biomasa?",
+     "opciones": ["Desaparición del viento", "Deforestación", "Aumento del gas ozono", "Contaminación radiactiva"],
+     "correcta": "Deforestación"}]
 
 if "pantalla" not in st.session_state:
     st.session_state["pantalla"] = "dashboard"
