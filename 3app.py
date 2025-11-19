@@ -4,7 +4,8 @@ progreso = {"Solar": {"completado": False, "puntaje": 0},
     "Eolica": {"completado": False, "puntaje": 0},
     "Hidraulica": {"completado": False, "puntaje": 0},
     "Biomasa": {"completado": False, "puntaje": 0},}
-
+if "pantalla" not in st.session_state:
+    st.session_state["pantalla"] = "dashboard"
 def mostrar_dashboard():
     st.header("Tipos de energias")
     st.subheader("Selecciona una energia:")
