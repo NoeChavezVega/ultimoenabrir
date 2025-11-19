@@ -54,7 +54,10 @@ preguntas_solar = [
      "correcta":"Falso"},
     {"pregunta":"¿Cuál es la principal razón por la que las celdas solares de silicio tienen mayor eficiencia que las policristalinas?",
      "opciones":["Tienen mayor grosor", "Poseen una estructura uniforme que reduce la recombinación electrónica ","Reflejan más luz para evitar saturación","Permiten operar a temperaturas más altas"],
-     "correcta":"Poseen una estructura uniforme que reduce la recombinación electrónica"},]
+     "correcta":"Poseen una estructura uniforme que reduce la recombinación electrónica"},
+    {"pregunta":"¿¿Por qué se considera una energía renovable?",
+     "opciones":["porque es económica","tiene un menor impacto ambienta","su tecnología es de una calidad mayor","puede usarse en diferentes ámbitos "],
+     "correcta":"tiene un menor impacto ambiental"},
 
 preguntas_eolica = [{"pregunta":"¿Qué tipo de energía aprovechan los aerogeneradores?",
      "opciones":["Energía solar","Energía del viento","Energía hidráulica","Energía geotérmica"],
