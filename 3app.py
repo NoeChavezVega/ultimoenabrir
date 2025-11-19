@@ -14,7 +14,7 @@ def mostrar_dashboard():
             st.session_state["pantalla"] = juego
             
 def mostrar_preguntas(preguntas, juego):
-    st.header(f"🎮 Juego: {juego}")
+    st.header(f" Juego: {juego}")
     puntaje = 0
     respuestas_usuario = {}
     for i, item in enumerate(preguntas):
