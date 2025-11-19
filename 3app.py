@@ -60,7 +60,11 @@ preguntas_solar = [
      "correcta":"tiene un menor impacto ambiental"},
     {"pregunta":"¿Cuál de los siguientes factores aumenta la eficiencia de un panel solar?",
      "opciones":["Alta acumulación de polvo"," Alta temperatura ambiental","Orientación adecuada hacia el Sol","Colocarlo en sombra parcial"],
-     "correcta":"Orientación adecuada hacia el Sol "},]
+     "correcta":"Orientación adecuada hacia el Sol "},
+    {"pregunta":"¿Cuál es una desventaja de la energía solar?",
+     "opciones":["Produce gases contaminantes","Depende de la radiación solar ","Emite ruido durante la generación","Requiere combustibles fósiles"],
+     "correcta":"Depende de la radiación solar"},]
+    
 
 
 preguntas_eolica = [{"pregunta":"¿Qué tipo de energía aprovechan los aerogeneradores?",
