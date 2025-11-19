@@ -70,8 +70,7 @@ def mostrar_preguntas(preguntas, juego):
             """)
 
         # -----------------------------------------------
-        st.info("Regresando al menú principal...")
-        st.session_state["pantalla"] = "dashboard"
+    
 
 
 # --- PREGUNTAS ---
