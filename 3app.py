@@ -48,7 +48,10 @@ preguntas_Solar = [
      "correcta":"silicio"},
     {"pregunta":"¿Cuándo los fotones golpean la placa, liberan electrones?",
      "opciones":["Verdadero","Falso"],
-     "correcta":"Verdadero"},]
+     "correcta":"Verdadero"},
+    {"pregunta":"¿la temperatura afecta el rendimiento de una celda fotovoltaica?",
+     "opciones":["Verdadero","Falso"],
+     "correcta":"Falso"},
 
 preguntas_eolica = [{"pregunta":"¿Qué tipo de energía aprovechan los aerogeneradores?",
      "opciones":["Energía solar","Energía del viento","Energía hidráulica","Energía geotérmica"],
