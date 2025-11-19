@@ -76,7 +76,30 @@ preguntas_eolica = [{"pregunta":"¿Qué tipo de energía aprovechan los aerogene
      "correcta":"La velocidad del viento"},
     {"pregunta":"¿Cuál de estos es un beneficio de la energía eólica?",
      "opciones":["Produce gases tóxicos","Utiliza combustibles fósiles","Es una fuente renovable","Consume grandes cantidades de agua"],
-     "correcta":"Es una fuente renovable"},]
+     "correcta":"Es una fuente renovable"},
+                    {"pregunta":"¿En qué forma se genera la electricidad en un aerogenerador?",
+     "opciones":["Combustión interna","Vibraciones mecánicas","Rotación de un eje conectada a un generador","Reacciones químicas"],
+     "correcta":"Rotación de un eje conectada a un generador"},
+
+    {"pregunta":"¿Cuál es una desventaja de la energía eólica?",
+     "opciones":["Requiere petróleo para operar","Depende de la disponibilidad del viento","Produce dióxido de carbono","Solo funciona de noche"],
+     "correcta":"Depende de la disponibilidad del viento"},
+
+    {"pregunta":"¿Cuál es la función del generador dentro de un aerogenerador?",
+     "opciones":["Controlar la orientación de las palas","Convertir energía mecánica en eléctrica","Medir la velocidad del viento","Detener el sistema"],
+     "correcta":"Convertir energía mecánica en eléctrica"},
+
+    {"pregunta":"¿Qué tipo de energía tiene el viento antes de mover las palas?",
+     "opciones":["Energía química","Energía térmica","Energía cinética","Energía sonora"],
+     "correcta":"Energía cinética"},
+
+    {"pregunta":"¿Cómo se orientan los aerogeneradores hacia el viento?",
+     "opciones":["Se mueven manualmente","Con sensores y un sistema de giro automático","Mediante una brújula","Girando por gravedad"],
+     "correcta":"Con sensores y un sistema de giro automático"},
+
+    {"pregunta":"¿Qué países suelen tener mayor potencial para la energía eólica?",
+     "opciones":["Países sin costas","Países con fuertes vientos constantes","Países desérticos sin viento","Países muy húmedos"],
+     "correcta":"Países con fuertes vientos constantes"}
     
 
 preguntas_hidraulica = [
