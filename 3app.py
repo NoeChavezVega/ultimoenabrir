@@ -1,26 +1,9 @@
 import streamlit as st
-
-st.set_page_config(
-    page_title="EcoAprende",
-    page_icon="🌱",
-    layout="wide"
-)
-
-st.title("🌱 EcoAprende - Juegos de Energía")
-
-# ---------------------------
-# PROGRESO
-# ---------------------------
-progreso = {
-    "Solar": {"completado": False, "puntaje": 0},
+st.title("🌱 EcoAprende Juegos de Energías")
+progreso = {"Solar": {"completado": False, "puntaje": 0},
     "Eolica": {"completado": False, "puntaje": 0},
     "Hidraulica": {"completado": False, "puntaje": 0},
-    "Biomasa": {"completado": False, "puntaje": 0},
-}
-
-# ---------------------------
-# DASHBOARD
-# ---------------------------
+    "Biomasa": {"completado": False, "puntaje": 0},}
 def mostrar_dashboard():
     st.header("Dashboard de Juegos")
     st.subheader("Selecciona un juego:")
