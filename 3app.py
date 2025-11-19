@@ -33,7 +33,7 @@ def mostrar_preguntas(preguntas, juego):
         st.balloons()
         st.session_state["pantalla"] = "dashboard"
 
-preguntas_Solar = [
+preguntas_solar = [
     {"pregunta":"¿Qué tipo de tecnología utiliza la energía solar?",
      "opciones":["pirolisis y carbonización","multiplicadora","mecánica","fotovoltaica"],
      "correcta":"fotovoltaica"},
