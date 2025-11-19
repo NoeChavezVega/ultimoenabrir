@@ -6,8 +6,8 @@ progreso = {"Solar": {"completado": False, "puntaje": 0},
     "Biomasa": {"completado": False, "puntaje": 0},}
 
 def mostrar_dashboard():
-    st.header("Dashboard de Juegos")
-    st.subheader("Selecciona un juego:")
+    st.header("Tipos de energias")
+    st.subheader("Selecciona una energia:")
     for juego, data in progreso.items():
         nombre_mostrar = f"{juego} {'✔️' if data['completado'] else ''}"
         if st.button(nombre_mostrar, key=f"boton_{juego}"):
