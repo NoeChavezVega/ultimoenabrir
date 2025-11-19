@@ -193,7 +193,19 @@ preguntas_biomasa = [{"pregunta":"¿Qué es la biomasa?",
      "correcta":"Digestión anaerobia "},
     {"pregunta":"¿Qué combustible se obtiene de algunos cultivos como el maíz o la caña de azúcar",
      "opciones":["Diesel fósil","Etanol  ","Propano","Gasolina "],
-     "correcta":"Etanol"},]
+     "correcta":"Etanol"},
+    {"pregunta":"¿Qué combustible se obtiene de algunos cultivos como el maíz o la caña de azúcar",
+     "opciones":["Diesel fósil","Etanol  ","Propano","Gasolina "],
+     "correcta":"Etanol"},
+    {"pregunta":"¿Qué tipo de energía tiene la biomasa antes de ser procesada?",
+     "opciones":["química almacenada ","sonora  ","lumínica","cinética "],
+     "correcta":"química almacenada"},
+    {"pregunta":"¿Qué impacto ambiental puede tener el uso excesivo de biomasa?",
+     "opciones":["Desaparición del viento ","Deforestación  ",") Aumento del gas ozono","Contaminación radiactiva "],
+     "correcta":" Deforestación "},
+    {"pregunta":"¿Qué dispositivo se utiliza para producir biogás a partir de residuos orgánicos?",
+     "opciones":[" Caldera ","Aerogenerador  "," Biodigestor","Transformador "],
+     "correcta":" Biodigestor "},]
 
     
     
