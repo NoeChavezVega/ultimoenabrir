@@ -32,7 +32,7 @@ def mostrar_preguntas(preguntas, juego):
         st.success(f"Juego completado. Ganaste {puntaje} puntos 🎉")
         st.balloons()
 
-        if juego == "Solar":
+         if juego == "Solar":
             st.markdown("### ☀️ Información sobre la energía solar")
             st.write("""En el estado de Chihuahua, las energías renovables aportan una variedad de beneficios importantes gracias a las características propias del territorio. 
             La energía solar destaca especialmente porque el estado recibe una de las radiaciones solares más altas del país, 
@@ -41,11 +41,16 @@ def mostrar_preguntas(preguntas, juego):
             reducción considerable de emisiones de CO₂ y atracción de inversiones para granjas solares que han impulsado el empleo local. 
             Además, ha permitido llevar energía a comunidades rurales que antes no contaban con servicio eléctrico, 
             mejorando su calidad de vida y fortaleciendo la independencia energética del estado""")
-           
+
+            # === CALCULADORA SOLAR BIEN UBICADA ===
             st.subheader("🔢 Calculadora de energía solar")
             irradiancia = st.number_input("Irradiancia solar (W/m²)", value=800, key="irr_sol")
             area = st.number_input("Área del panel (m²)", value=1.6, key="area_sol")
             eficiencia = st.number_input("Eficiencia (%)", value=18, key="efi_sol") / 100
+
+            if st.button("Calcular energía solar", key="calc_sol"):
+                energia = irradiancia * area * eficiencia
+                st.success(f"Energía generada: {energia:.2f} W")
 
             if st.button("Calcular energía solar", key="calc_sol"):
                 energia = irradiancia * area * eficiencia
